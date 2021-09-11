@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TeleMelody</title>
+    
+    <script src="https://unpkg.com/pdfobject@2.2.6/pdfobject.min.js"></script>
+    <style>
+        .pdfobject-container {
+            max-width: 100%;
+            width: 700px;
+            height: 600px;
+            border: 10px solid rgba(0,0,0,.2);
+            margin: 0;
+        }
+        </style>
+</head>
+
+<body style="text-align: left;">
+    <h1>Demo Page for "TeleMelody: Lyric-to-Melody Generation with a Template-Based Two-Stage Method"</h1>
+
+    <br>
+    <br>
+    <h4 style='display:inline'>Abstract: </h4>
+    <p style='display:inline'> Lyric-to-melody generation is an important task in automatic songwriting. Previous
+        lyric-to-melody generation systems usually adopt end-to-end models that directly generate melodies from lyrics,
+        which suffer from several issues: 1) lack of paired lyric-melody training data; 2) lack of control on generated
+        melodies. In this paper, we develop TeleMelody, a two-stage lyric-to-melody generation system with music
+        structure information (e.g., tonality, chord, rhythm and cadence) as the bridge between lyric and melody, i.e.,
+        the system consists of a lyric-to-template module and a template-to-melody module. TeleMelody has two
+        advantages. First, it is data efficient. The template-to-melody module is trained in a self-supervised way
+        (i.e., the source template data is extracted from the target melody) that does not need any paired data, and the
+        lyric-to-template module is made up of some rule-based modules and a lyric-to-rhythm model trained with paired
+        lyric and rhythm, which is easier to obtain than the paired lyric-melody data. Second, it is controllable. The
+        designs of template and alignment regularization guided by musical knowledge ensure that the generated melodies
+        are under the control of musical elements that can be adjusted at will. Both subjective and objective
+        experimental evaluations demonstrate that TeleMelody can generate melody with higher quality, better
+        controllability, and less requirement on paired lyric-melody data than previous generation systems. </p>
+    <h2 id="EN">English Demo</h2>
+    <h4>Example 1: </h4>
+    <table>
+        <thead>
+            <tr>
+                <div id="en_example1">It appears you don't have Adobe Reader or PDF support in this web
+                    browser. <a href="./demo/en/sheet/5.pdf">Click here to download the PDF</a></div>
+                
+                <script>
+                PDFObject.embed("./demo/en/sheet/5.pdf", "#en_example1");
+                </script>
+                <td><audio controls="controls">
+                        <source src="./demo/en/mp3/5.mp3" autoplay="">Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+        </thead>
+    </table>
+
+    <h4>Example 2: </h4>
+    <table>
+        <thead>
+            <tr>
+                <div id="en_example2">It appears you don't have Adobe Reader or PDF support in this web
+                    browser. <a href="./demo/en/sheet/7.pdf">Click here to download the PDF</a></div>
+                
+                <script>
+                PDFObject.embed("./demo/en/sheet/7.pdf", "#en_example2");
+                </script>
+                <td><audio controls="controls">
+                        <source src="./demo/en/mp3/7.mp3" autoplay="">Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+        </thead>
+    </table>
+
+
+    <h2 id="EN">Chinese Demo</h2>
+    <h4>Example 1: </h4>
+    <table>
+        <thead>
+            <tr>
+                <div id="zh_example1">It appears you don't have Adobe Reader or PDF support in this web
+                    browser. <a href="./demo/zh/sheet/0.pdf">Click here to download the PDF</a></div>
+                
+                <script>
+                PDFObject.embed("./demo/zh/sheet/0.pdf", "#zh_example1");
+                </script>
+                <td><audio controls="controls">
+                        <source src="./demo/zh/mp3/0.mp3" autoplay="">Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+        </thead>
+    </table>
+
+    <h4>Example 2: </h4>
+    <table>
+        <thead>
+            <tr>
+                <div id="zh_example2">It appears you don't have Adobe Reader or PDF support in this web
+                    browser. <a href="./demo/zh/sheet/1.pdf">Click here to download the PDF</a></div>
+                
+                <script>
+                PDFObject.embed("./demo/zh/sheet/1.pdf", "#zh_example2");
+                </script>
+                <td><audio controls="controls">
+                        <source src="./demo/zh/mp3/1.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+        </thead>
+    </table>
+
