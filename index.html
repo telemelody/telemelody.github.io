@@ -25,6 +25,7 @@
     <h4 style='display:inline'>Abstract: </h4>
     <p style='display:inline'> Lyric-to-melody generation is an important task in automatic songwriting. Previous lyric-to-melody generation systems usually adopt end-to-end models that directly generate melodies from lyrics, which suffer from several issues: 1) lack of paired lyric-melody training data; 2) lack of control on generated melodies. In this paper, we develop TeleMelody, a two-stage lyric-to-melody generation system with music template (e.g., tonality, chord progression, rhythm pattern, and cadence) to bridge the gap between lyrics and melodies (i.e., the system consists of a lyric-to-template module and a template-to-melody module). TeleMelody has two advantages. First, it is data efficient. The template-to-melody module is trained in a self-supervised way (i.e., the source template is extracted from the target melody) that does not need any lyric-melody paired data. The lyric-to-template module is made up of some rules and a lyric-to-rhythm model, which is trained with paired lyric-rhythm data that is easier to obtain than paired lyric-melody data. Second, it is controllable. The design of template ensures that the generated melodies can be controlled by adjusting the musical elements in template. Both subjective and objective experimental evaluations demonstrate that TeleMelody generates melodies with higher quality, better controllability, and less requirement on paired lyric-melody data than previous generation systems.  </p>
     <h2>Related Work</h2>
+    <h4>Here we list demos of related works for your reference.</h4>
     <ul>
         <li><a href="https://musicgeneration.github.io/SongMASS/">SongMASS: Automatic Song Writing with Pre-training and Alignment Constraint</a></li>
         <li><a href="https://drive.google.com/file/d/1ugOwfBsURax1VQ4jHmI8P3ldE5xdDj0l/view?usp=sharing">Conditional LSTM-GAN for Melody Generation from Lyrics</a></li>
@@ -32,7 +33,7 @@
     </ul>
 
     <h2>Chinese Demo</h2>
-    We utilize <a href="https://singer.xiaoice.com">XStudioSinger</a> for singing synthesis (currently only support for Chinese lyrics).
+    We utilize <a href = "http://www.chordpulse.com">ChordPulse</a> for accompaniment and <a href="https://singer.xiaoice.com">XStudioSinger</a> for singing synthesis. (XStudioSinger currently only supports Chinese lyrics)
     <h4>Example 1: </h4>
     <table>
         <thead>
