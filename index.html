@@ -24,16 +24,11 @@
     <br>
     <h4 style='display:inline'>Abstract: </h4>
     <p style='display:inline'> Lyric-to-melody generation is an important task in automatic songwriting. Previous lyric-to-melody generation systems usually adopt end-to-end models that directly generate melodies from lyrics, which suffer from several issues: 1) lack of paired lyric-melody training data; 2) lack of control on generated melodies. In this paper, we develop TeleMelody, a two-stage lyric-to-melody generation system with music template (e.g., tonality, chord progression, rhythm pattern, and cadence) to bridge the gap between lyrics and melodies (i.e., the system consists of a lyric-to-template module and a template-to-melody module). TeleMelody has two advantages. First, it is data efficient. The template-to-melody module is trained in a self-supervised way (i.e., the source template is extracted from the target melody) that does not need any lyric-melody paired data. The lyric-to-template module is made up of some rules and a lyric-to-rhythm model, which is trained with paired lyric-rhythm data that is easier to obtain than paired lyric-melody data. Second, it is controllable. The design of template ensures that the generated melodies can be controlled by adjusting the musical elements in template. Both subjective and objective experimental evaluations demonstrate that TeleMelody generates melodies with higher quality, better controllability, and less requirement on paired lyric-melody data than previous generation systems.  </p>
-    <h2>Related Work</h2>
-    <h4>Here we list demos of related works for your reference.</h4>
-    <ul>
-        <li><a href="https://musicgeneration.github.io/SongMASS/">SongMASS: Automatic Song Writing with Pre-training and Alignment Constraint</a></li>
-        <li><a href="https://drive.google.com/file/d/1ugOwfBsURax1VQ4jHmI8P3ldE5xdDj0l/view?usp=sharing">Conditional LSTM-GAN for Melody Generation from Lyrics</a></li>
-        <li><a href="https://ckip.iis.sinica.edu.tw/service/icomposer/">iComposer: An Automatic Songwriting System for Chinese Popular Music</a></li>
-    </ul>
+    
 
     <h2>Chinese Demo</h2>
-    We utilize <a href = "http://www.chordpulse.com">ChordPulse</a> for accompaniment and <a href="https://singer.xiaoice.com">XStudioSinger</a> for singing synthesis. (XStudioSinger currently only supports Chinese lyrics)
+    We utilize <a href = "http://www.chordpulse.com">ChordPulse</a> to generate muti-track accompaniment for the generated melodies. <br>
+    For Chinese demos, we also utilize <a href="https://singer.xiaoice.com">XStudioSinger</a> to synthesize singing voice. (XStudioSinger currently only supports Chinese lyrics)
     <h4>Example 1: </h4>
     <table>
         <thead>
@@ -44,14 +39,19 @@
                 <script>
                 PDFObject.embed("./demo/zh_demo/0.pdf", "#zh_example1");
                 </script>
-                
-                <td><audio controls="controls">
-                        <source src="./demo/zh_demo/0.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
-                <br> 
-                <td><audio controls="controls">
-                    <source src="./demo/zh_demo/0_singing.mp3" autoplay="">Your browser does not support the audio element.
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/0_melody.mp3" autoplay="">Your browser does not support the audio element.
                 </audio></td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                <source src="./demo/zh_demo/0.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td><h5>singing</h5><audio controls="controls">
+                <source src="./demo/zh_demo/0_singing.mp3" autoplay="">Your browser does not support the audio element.
+            </audio></td>
             </tr>
         </thead>
     </table>
@@ -66,12 +66,18 @@
                 <script>
                 PDFObject.embed("./demo/zh_demo/1.pdf", "#zh_example2");
                 </script>
-                
-                <td><audio controls="controls">
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/1_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
                         <source src="./demo/zh_demo/1.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
-                <br> 
-                <td><audio controls="controls">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><h5>singing</h5><audio controls="controls">
                     <source src="./demo/zh_demo/1_singing.mp3" autoplay="">Your browser does not support the audio element.
                 </audio></td>
             </tr>
@@ -88,12 +94,21 @@
                 <script>
                 PDFObject.embed("./demo/zh_demo/2.pdf", "#zh_example3");
                 </script>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/2_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
                 
-                <td><audio controls="controls">
-                        <source src="./demo/zh_demo/2.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
-                <br> 
-                <td><audio controls="controls">
+                
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/2.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+                
+            <tr> 
+                <td><h5>singing</h5><audio controls="controls">
                     <source src="./demo/zh_demo/2_singing.mp3" autoplay="">Your browser does not support the audio element.
                 </audio></td>
             </tr>
@@ -110,14 +125,21 @@
                 <script>
                 PDFObject.embed("./demo/zh_demo/3.pdf", "#zh_example4");
                 </script>
-                
-                <td><audio controls="controls">
-                        <source src="./demo/zh_demo/3.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
-                <br> 
-                <td><audio controls="controls">
-                    <source src="./demo/zh_demo/3_singing.mp3" autoplay="">Your browser does not support the audio element.
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/3_melody.mp3" autoplay="">Your browser does not support the audio element.
                 </audio></td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/3.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+            <tr> 
+                <td><h5>singing</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/3_singing.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -132,14 +154,22 @@
                 <script>
                 PDFObject.embed("./demo/zh_demo/4.pdf", "#zh_example5");
                 </script>
-                
-                <td><audio controls="controls">
-                        <source src="./demo/zh_demo/4.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
-                <br> 
-                <td><audio controls="controls">
-                    <source src="./demo/zh_demo/4_singing.mp3" autoplay="">Your browser does not support the audio element.
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/4_melody.mp3" autoplay="">Your browser does not support the audio element.
                 </audio></td>
+                
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/4.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+            <tr> 
+                <td><h5>singing</h5><audio controls="controls">
+                    <source src="./demo/zh_demo/4_singing.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -157,9 +187,15 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/0.pdf", "#en_example1");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/0.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/0_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td> 
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/0.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -174,9 +210,16 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/1.pdf", "#en_example2");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/1.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/1_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/1.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -191,9 +234,16 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/2.pdf", "#en_example3");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/2.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/2_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+                
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/2.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -208,9 +258,16 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/3.pdf", "#en_example4");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/3.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/3_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/3.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -225,9 +282,16 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/4.pdf", "#en_example5");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/4.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/4_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+                
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/4.mp3" autoplay="">Your browser does not support the audio element.
+                </audio>
+                </td>
             </tr>
         </thead>
     </table>
@@ -244,8 +308,14 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/4_seed_1.pdf", "#seed0");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/4_seed_1.mp3"" autoplay="">Your browser does not support the audio element.
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/4_seed_1_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+                
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/4_seed_1.mp3"" autoplay="">Your browser does not support the audio element.
                 </audio></td>
             </tr>
         </thead>
@@ -261,8 +331,13 @@
                     <script>
                     PDFObject.embed("./demo/en_demo/4_seed_2.pdf", "#seed1");
                     </script>
-                    <td><audio controls="controls">
-                            <source src="./demo/en_demo/4_seed_2.mp3" autoplay="">Your browser does not support the audio element.
+                    <td><h5>melody</h5><audio controls="controls">
+                        <source src="./demo/en_demo/4_seed_2_melody.mp3" autoplay="">Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                    <td><h5>melody + accompaniment</h5><audio controls="controls">
+                        <source src="./demo/en_demo/4_seed_2.mp3" autoplay="">Your browser does not support the audio element.
                     </audio></td>
                 </tr>
             </thead>
@@ -280,9 +355,22 @@
                 <script>
                 PDFObject.embed("./demo/en_demo/0_longerinput.pdf", "#longer_input");
                 </script>
-                <td><audio controls="controls">
-                        <source src="./demo/en_demo/0_longerinput.mp3" autoplay="">Your browser does not support the audio element.
-                    </audio></td>
+                <td><h5>melody</h5><audio controls="controls">
+                    <source src="./demo/en_demo/0_longerinput_melody.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
+            </tr>
+            <tr>
+                <td><h5>melody + accompaniment</h5><audio controls="controls">
+                    <source src="./demo/en_demo/0_longerinput.mp3" autoplay="">Your browser does not support the audio element.
+                </audio></td>
             </tr>
         </thead>
     </table>
+
+<h2>Related Work</h2>
+<h4>Here we list demos of related works for your reference.</h4>
+<ul>
+    <li><a href="https://musicgeneration.github.io/SongMASS/">SongMASS: Automatic Song Writing with Pre-training and Alignment Constraint</a></li>
+    <li><a href="https://drive.google.com/file/d/1ugOwfBsURax1VQ4jHmI8P3ldE5xdDj0l/view?usp=sharing">Conditional LSTM-GAN for Melody Generation from Lyrics</a></li>
+    <li><a href="https://ckip.iis.sinica.edu.tw/service/icomposer/">iComposer: An Automatic Songwriting System for Chinese Popular Music</a></li>
+</ul>
